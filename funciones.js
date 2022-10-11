@@ -354,6 +354,7 @@ function Kia(){
 Kia();*/
 
 //punto10
+/*
 function Encuestas(){
  candidato1=parseInt(prompt("Ingrese el total de votos que obtuvo el candidato numero 1 (solo numeros)"));
  candidato2=parseInt(prompt("Ingrese el total de votos que obtuvo el candidato numero 2 (solo numeros)"));
@@ -395,4 +396,38 @@ function Encuestas(){
 }
 
 }
- Encuestas();
+ Encuestas(); */
+
+ //punto11
+ function esPrimo(numero) {
+  //optimizacimos y es que podemos iterar desde el número 2 hasta la raíz cuadrada del número de tal manera que optimizaríamos la complejidad ciclomática del método.
+  for(let i = 2,raiz=Math.sqrt(numero); i <= raiz; i++)
+      if(numero % i === 0) return false; //verifica si es divisible
+  return numero > 1;
+}  
+function NumerosPrimos()
+{
+  intmenor=parseInt(prompt("Ingrese el numero menor del intervalo"));//pedimos el intervalo menor
+  intmayor=parseInt(prompt("Ingrese el numero mayor del intervalo"));// pedimos el intervalo mayor
+  sumatoria=0; producto=1; contador=0; promedio=0;
+  if(intmenor != intmayor)// validamos que el menor sea diferente del amyor
+  {
+    if(0 <= intmenor < intmayor) // validamos que solo se puedan numeros mayores que cero
+    { 
+      for (let x=intmenor;x<=intmayor;x++) //se calida en el rango de los intervalos
+      {
+        if (esPrimo(x))
+        {
+         sumatoria=sumatoria+x;
+         producto=producto*x;
+         contador=contador+1;
+        }
+      }
+     promedio=sumatoria/contador;
+     console.log("La sumatoria de los numeros primos es de: "+sumatoria);
+     console.log("La producto de los numeros primos es de: "+producto);
+     console.log("El promedio de los numeros primoes es de: "+promedio);
+    }
+  }
+}
+NumerosPrimos();
