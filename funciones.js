@@ -190,15 +190,64 @@ function PromedioEdades(){
 PromedioEdades();*/
 
 //Punto5
+/*
+//funcion para analizar el numero menor de varios ingresados
 function NumeroMenor(){
+  //se pide la cantidad de numeros a analizar
   cantidadnumeros=parseInt(prompt("Ingrese la cantidad de numeros"));
   numero=0; numeroanterior=1000;
+  //se hace un ciclo en base al tamaño de la cantidad de numeros
   for(i=1;i<=cantidadnumeros;i++){
     numero=parseInt(prompt("Ingrese el numero"));
+    //si el numero es menor que el numero anterior entrar y toma la posicion del numero anterior y todo debe ser numero positivo
     if(numero < numeroanterior && numero >= 0){
       numeroanterior=numero;
     }
   }
 console.log("El numero menor es:"+numeroanterior);
 }
-NumeroMenor();
+NumeroMenor();*/
+
+//punto6
+function PesoObesidad(){
+  //se declaran las variables acumulativas y se les da un valor inicial de cero para evitar errores
+  datospeso=0; acum1=0; acum2=0; acum3=0; acum4=0; acum5=0;
+  // se crea el for con 5 ya que son 5 personas ha analizar
+  for (i=1;i<=5;i++){
+    //se crea el for con 10 datos puesto que son 10 pesos que se tomaran
+    for(j=1;j<=10;j++){
+      //se crea una condicion para poder validad las variables acumulativas en cada iteracion del for externo
+      if(i==1)
+      {
+       datospeso=parseInt(prompt("Ingrese el peso del usuario "+i+" en la bascula "+j));
+       acum1=acum1+datospeso;
+      }else if(i==2){
+        datospeso=parseInt(prompt("Ingrese el peso del usuario "+i+" en la bascula "+j));
+       acum2=acum2+datospeso;
+      }else if(i==3){
+        datospeso=parseInt(prompt("Ingrese el peso del usuario "+i+" en la bascula "+j));
+        acum3=acum3+datospeso;
+      }else if(i==4){
+        datospeso=parseInt(prompt("Ingrese el peso del usuario "+i+" en la bascula "+j));
+        acum4=acum4+datospeso;
+      }else if(i==5){
+       datospeso=parseInt(prompt("Ingrese el peso del usuario "+i+" en la bascula "+j));
+       acum5=acum5+datospeso;
+      }
+    }
+    
+  }
+  //Se utilizan las variables acumulativas para realizar el calculo del promedio para cada miembro
+    promedio1=acum1/10;
+    promedio2=acum2/10;
+    promedio3=acum3/10;
+    promedio4=acum4/10;
+    promedio5=acum5/10;
+
+    console.log("El Promedio total de peso del primer miembro es:"+promedio1);
+    console.log("El Promedio total de peso del segundo miembro es:"+promedio2);
+    console.log("El Promedio total de peso del tercer miembro es:"+promedio3);
+    console.log("El Promedio total de peso del cuarto miembro es:"+promedio4);
+    console.log("El Promedio total de peso del quinto miembro es:"+promedio5);
+}
+PesoObesidad();
