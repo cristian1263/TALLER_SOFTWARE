@@ -469,21 +469,27 @@ function separacionNumeros()
   separacionNumeros();*/
 
   //punto 13
+  /*
   function  fibonacci(){
+    //se piden los ingresos de la serie de fibonacci
    tamaño=parseInt(prompt("Ingrese el limite al que quiere que calcule la serie de fibonacci"));
    dato0=parseInt(prompt("Ingrese el primer numero de la serie de fibonacci"));
    dato1=parseInt(prompt("Ingrese el segundo numero de la serie de fibonacci mayor que el primero"));
-
+  //se agregan los dos primeros datos al vector de fibonacci
   var fibonacci = [];
   fibonacci[0] = dato0;
   fibonacci[1] = dato1;
   
   pares=0; impares=0; ceros=0;
+// se realizan las validaciones para que el codigo funcione de manera correcta
   if(dato0 != dato1){
+    if(dato0 >= 0 && dato1 >= 0){
     if(dato0 < dato1){ 
+      //se corre el for en base al tamaño que se queire que tenga la serie
   for (var i = 2; i < tamaño; i++) {
-  fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
+  fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];//se realizan las operaciones para los siguientes numero de la serie
 
+  //se consiguen los numeros pare, impares y los ceros que hay dentro de la operacion
   if (fibonacci[i] == 0 ){
     ceros=ceros+1;
   }else if((fibonacci[i] % 2) == 1){
@@ -503,4 +509,29 @@ function separacionNumeros()
   console.log("El dos numeros ingresados deben ser diferentes");
  }
 }
-fibonacci()
+}
+fibonacci()*/
+
+//punto14
+function MCD(){
+  //Se piden los datos ha analizar
+    primernumero=parseInt(prompt("Ingrese el primer numero (entero)"));
+    segundonumero=parseInt(prompt("Ingrese el segundo numero (entero)"));
+
+    primernumero= Math.abs(primernumero); //se calcula el valor absoluto del numero ingresado
+    segundonumero= Math.abs(segundonumero); //se calcula el valor absoluto del numero ingresado
+    let varibletemporal; // se crea una variable temporal para guardar datos momentaneamente
+
+    if(primernumero >=  0 && segundonumero >= 0){
+      //se realiza la operacion en base a un ciclo while para poder manejar mejor los datos de las funciones
+      while(segundonumero){
+      varibletemporal=segundonumero;
+      segundonumero= primernumero % segundonumero;
+      primernumero = varibletemporal;
+    }
+    console.log("El maximo como un divisor entre los dos numeros ingresados es de: "+primernumero);
+  }else{
+    console.log("Ingrese solo numeros positivos");
+  }
+}
+MCD();
