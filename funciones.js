@@ -434,27 +434,29 @@ function NumerosPrimos()
 NumerosPrimos(); */
 
 //punto12
+/*
 function separacionNumeros()
   {
-   cantidadnumeros=parseInt(prompt("Ingrese la cantidad de numeros que va a ingresar"));
-   cantidadpar=0; cantidadimpar=0; suma=0; producto=1; promedio=0;
-   for ( i=1; i <= cantidadnumeros;i++)
+   cantidadnumeros=parseInt(prompt("Ingrese la cantidad de numeros que va a ingresar"));// se pide le total de numeros
+   cantidadpar=0; cantidadimpar=0; suma=0; producto=1; promedio=0; 
+   for ( i=1; i <= cantidadnumeros;i++) // se genera el ciclo a partir de la cantidad de numeros
    {
-     numero=prompt("Ingrese el numero ha analizar");
-     separado=numero.split("");
+     numero=prompt("Ingrese el numero ha analizar"); // pedimos el numero a dividir
+     separado=numero.split(""); // separamos el numero
 
-     for( j=0 ;j < numero.length ; j++)
+     for( j=0 ;j < numero.length ; j++) // creamos un for a base del tamaño del numero separado
      {
        if(separado[j] % 2 == 0){
-         cantidadpar=cantidadpar + 1;
-         }else{
-          cantidadimpar=cantidadimpar + 1;
+         cantidadpar=cantidadpar + 1; //se cuentan los pares
+         }else{ 
+          cantidadimpar=cantidadimpar + 1; // se cuentan los impares
          }
-       suma = suma + parseInt(separado[j]);
-       producto = producto * parseInt(separado[j]);
+       suma = suma + parseInt(separado[j]); // sumamos todos los numeros dividos
+       producto = producto * parseInt(separado[j]); // multiplicamos todos los numeros divididos
      }
-     promedio=suma/numero.length;
+     promedio=suma/numero.length; // sacamso el promedio entre la suma de los numeros divididos con el tamaño
       
+     // mostramos los resultados
      console.log("La suma del numero "+i+" es de: "+suma);
      console.log("La multiplicacion del numero "+i+" es de: "+producto);
      console.log("El promedio del numero "+i+" es de: "+promedio);
@@ -464,4 +466,41 @@ function separacionNumeros()
    }
    
   }
-  separacionNumeros();
+  separacionNumeros();*/
+
+  //punto 13
+  function  fibonacci(){
+   tamaño=parseInt(prompt("Ingrese el limite al que quiere que calcule la serie de fibonacci"));
+   dato0=parseInt(prompt("Ingrese el primer numero de la serie de fibonacci"));
+   dato1=parseInt(prompt("Ingrese el segundo numero de la serie de fibonacci mayor que el primero"));
+
+  var fibonacci = [];
+  fibonacci[0] = dato0;
+  fibonacci[1] = dato1;
+  
+  pares=0; impares=0; ceros=0;
+  if(dato0 != dato1){
+    if(dato0 < dato1){ 
+  for (var i = 2; i < tamaño; i++) {
+  fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
+
+  if (fibonacci[i] == 0 ){
+    ceros=ceros+1;
+  }else if((fibonacci[i] % 2) == 1){
+    impares=impares+1;
+  }else if ((fibonacci[i] % 2) == 0 ){
+     pares=pares+1;
+  }
+  }
+  console.log("El total de numeros pares es de: "+pares);
+  console.log("El total de numeros impares es de: "+impares);
+  console.log("El total de numeros ceros es de: "+ceros);
+  console.log(fibonacci);
+  }else{
+    console.log("El primer numero de la serie tiene que ser menor que el segundo");
+  }
+ }else{
+  console.log("El dos numeros ingresados deben ser diferentes");
+ }
+}
+fibonacci()
