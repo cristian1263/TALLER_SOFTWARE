@@ -133,12 +133,18 @@ function zoo()
 zoo();*/
 
 //Punto 3
+/*
 function HorasTrabajadas(){
+  //Pedimos el todal de obreros a verificar su sueldo
   cantidadobreros=parseInt(prompt("Ingrese el total de obreros"));
+  //declaramos las variables
   pago=0; pagoextra=0; totalpago=0;  horasextras=0;
+  //creamos el for a base de la cantidad de obreros
   for( i=1;i<=cantidadobreros;i++ )
   {
+    //pedimos el total de horas trabajadas
     cantidadhoras=parseInt(prompt("Ingrese el total de horas trabajas del obrero "+i));
+    //creamos las validaciones
     if (cantidadhoras > 0  &&   cantidadhoras <= 40 ) {
        pago=cantidadhoras*20;
        console.log("El total a pagarle al obrero"+i+" es de: "+pago+"$");
@@ -154,5 +160,30 @@ function HorasTrabajadas(){
    
   }
 }
-HorasTrabajadas();
+HorasTrabajadas();*/
 
+//punto 4
+function PromedioEdades(){
+  numerohombres=parseInt(prompt("Ingrese el total de Hombres en el salon"));
+  numeromujeres=parseInt(prompt("Ingrese el total de Mujeres en el salon"));
+  promediohombres=0; acumhombres=0; promediomujeres=0; acummujeres=0; promediogrupo=0;
+  for (i=1;i<=numerohombres;i++)
+  {
+    edadhombre=parseInt(prompt("Ingrese la edad del hombre "+i));
+    acumhombres=acumhombres+edadhombre;
+  }
+  for (i=1;i<=numeromujeres;i++){
+    edadmujeres=parseInt(prompt("Ingrese la edad del mujer "+i));
+    acummujeres=acummujeres+edadmujeres;
+  }
+  Totalpromediohombres=(acumhombres/numerohombres);
+  Totalpromediomujeres=(acummujeres/numeromujeres);
+  acumgrupo=acumhombres+acummujeres;
+  numerogrupo=numerohombres+numeromujeres
+  promediogrupo=acumgrupo/numerogrupo;
+  
+  console.log("Total promedio hombres: "+Totalpromediohombres);
+  console.log("Total promedio mujeres: "+Totalpromediomujeres);
+  console.log("Promedio del Grupo: "+promediogrupo);
+}
+PromedioEdades();
