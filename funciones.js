@@ -323,6 +323,7 @@ function Teatro(){
 Teatro();*/
 
 //punto9
+/*
 function Kia(){
   acumuladorventas=0;comision=0;
 
@@ -350,4 +351,48 @@ function Kia(){
  }
  console.log("El total vendido de la empresa es de: "+acumuladorventas);
 }
-Kia();
+Kia();*/
+
+//punto10
+function Encuestas(){
+ candidato1=parseInt(prompt("Ingrese el total de votos que obtuvo el candidato numero 1 (solo numeros)"));
+ candidato2=parseInt(prompt("Ingrese el total de votos que obtuvo el candidato numero 2 (solo numeros)"));
+ candidato3=parseInt(prompt("Ingrese el total de votos que obtuvo el candidato numero 3 (solo numeros)"));
+ 
+ Totalvotos=candidato1+candidato2+candidato3;
+    
+ if(Totalvotos <= 50000 ){
+ if((candidato1 > candidato2) &&  (candidato1 > candidato3))
+ {
+   console.log("El Ganador en la votaciones fue el candidato numero 1");
+ } else if((candidato2 > candidato1) && (candidato2 > candidato3))
+  {
+  console.log("El Ganador en la votaciones fue el candidato numero 2");
+  }else if((candidato3 > candidato1) && (candidato3 > candidato2)) 
+   {
+   console.log("El Ganador en la votaciones fue el candidato numero 3");
+   } 
+
+   if(candidato1 == candidato2)
+     {
+      if(candidato1 == candidato3){
+      console.log("Hubo un empate entre los tres candidatos")
+      }else
+      {
+      console.log("Hubo un empate entre el candidato 1 y el candidato 2");
+      }
+     } else if(candidato1 == candidato3) 
+       {
+       console.log("Hubo un empate entre el candidato 1 y el candidato 3");
+       } else if(candidato2 == candidato3){
+        console.log("Hubo un empate entre el candidato 2 y el candidato 3");
+       }
+      
+       console.log("Total de votos es de: "+Totalvotos);
+ 
+}else{
+  console.log("El total de votos registrado supera el maximo");
+}
+
+}
+ Encuestas();
