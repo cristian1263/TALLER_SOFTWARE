@@ -302,11 +302,11 @@ console.log("El total gastado en el mercado es de: "+totaldegasto+"$");
 Mercado();*/
 
 //punto8
-
+/*
 function Teatro(){
-  preciopuestos=parseInt(prompt("Ingrese el precio de los asientos"));
+  preciopuestos=parseInt(prompt("Ingrese el precio de los asientos")); //se pide el precio de los asientos
   grupoedad1=0; grupoedad2=0; grupoedad3=0; grupoedad4=0; grupoedad5=0;
-
+// se realiza la operacion de retirar el porcentaje de descuento y guardarlo para medir las perdidas
   grupoedad1=(preciopuestos*0.35);
   grupoedad2=(preciopuestos*0.25);
   grupoedad3=(preciopuestos*0.10);
@@ -320,4 +320,34 @@ function Teatro(){
   console.log("El dinero perdido para el teatro en las personas de edades de 66 en Adelante años es de:"+grupoedad5);
   console.log("Se Recuerda a los clientes que los niños menores de 5 años no son admitidos en el teatro");
 }
-Teatro();
+Teatro();*/
+
+//punto9
+function Kia(){
+  acumuladorventas=0;comision=0;
+
+ for(i=1; i<=100 ; i++)  
+ {
+  ventavendedor=parseInt(prompt("Ingrese el total vendido por el vendedor "+i+" en el año (Solo numeros)")); // se pide el total de ventas con el trabajador
+  acumuladorventas=acumuladorventas+ventavendedor; // se acumulan todas las ventas para mostrar el total de ventas de la empresa
+  // se valida el valor vendido anualmente por el trabajador y se saca su comision
+  if(ventavendedor > 0 && ventavendedor <= 20000000){
+    comision=ventavendedor*0.1;
+    console.log("La comision del vendedor"+i+" es de: "+comision);
+  }else if(ventavendedor > 20000000 && ventavendedor < 40000000 ){
+    comision=ventavendedor*0.15;
+    console.log("La comision del vendedor"+i+" es de: "+comision);
+  }else if(ventavendedor >=  40000000 && ventavendedor < 80000000){
+    comision=ventavendedor*0.2;
+    console.log("La comision del vendedor"+i+" es de: "+comision);
+  }else if(ventavendedor >= 80000000 && ventavendedor < 160000000){
+    comision=ventavendedor*0.25;
+    console.log("La comision del vendedor"+i+" es de: "+comision);
+  }else if (ventavendedor >= 160000000){
+    comision=ventavendedor*0.30;
+    console.log("La comision del vendedor"+i+" es de: "+comision);
+  }
+ }
+ console.log("El total vendido de la empresa es de: "+acumuladorventas);
+}
+Kia();
