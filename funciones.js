@@ -399,6 +399,7 @@ function Encuestas(){
  Encuestas(); */
 
  //punto11
+ /*
  function esPrimo(numero) {
   //optimizacimos y es que podemos iterar desde el número 2 hasta la raíz cuadrada del número de tal manera que optimizaríamos la complejidad ciclomática del método.
   for(let i = 2,raiz=Math.sqrt(numero); i <= raiz; i++)
@@ -430,4 +431,37 @@ function NumerosPrimos()
     }
   }
 }
-NumerosPrimos();
+NumerosPrimos(); */
+
+//punto12
+function separacionNumeros()
+  {
+   cantidadnumeros=parseInt(prompt("Ingrese la cantidad de numeros que va a ingresar"));
+   cantidadpar=0; cantidadimpar=0; suma=0; producto=1; promedio=0;
+   for ( i=1; i <= cantidadnumeros;i++)
+   {
+     numero=prompt("Ingrese el numero ha analizar");
+     separado=numero.split("");
+
+     for( j=0 ;j < numero.length ; j++)
+     {
+       if(separado[j] % 2 == 0){
+         cantidadpar=cantidadpar + 1;
+         }else{
+          cantidadimpar=cantidadimpar + 1;
+         }
+       suma = suma + parseInt(separado[j]);
+       producto = producto * parseInt(separado[j]);
+     }
+     promedio=suma/numero.length;
+      
+     console.log("La suma del numero "+i+" es de: "+suma);
+     console.log("La multiplicacion del numero "+i+" es de: "+producto);
+     console.log("El promedio del numero "+i+" es de: "+promedio);
+     console.log("cantidad de numeros pares en el numero "+i+" es de: "+cantidadpar);
+     console.log("cantidad de numeros impares en el numero "+i+" es de: "+cantidadimpar); 
+     
+   }
+   
+  }
+  separacionNumeros();
