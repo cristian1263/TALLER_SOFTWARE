@@ -513,6 +513,7 @@ function separacionNumeros()
 fibonacci()*/
 
 //punto14
+/*
 function MCD(){
   //Se piden los datos ha analizar
     primernumero=parseInt(prompt("Ingrese el primer numero (entero)"));
@@ -534,4 +535,33 @@ function MCD(){
     console.log("Ingrese solo numeros positivos");
   }
 }
-MCD();
+MCD();*/
+
+//punto15
+function PoblacionAnual(){
+
+poblacionA=25000000;
+poblacionB=19900000;
+año=1994;
+
+
+do{
+acumulativoA=0;
+acumulativoB=0;
+ if(poblacionA > poblacionB){
+   acumulativoA = poblacionA * 0.2;
+   poblacionA=poblacionA+acumulativoA;
+
+   acumulativoB = poblacionB * 0.3;
+   poblacionB=poblacionB+acumulativoB;
+   año=año+1;
+   i=0;
+ }else{
+    i=1;
+ }
+}while(i==0)
+ console.log("Poblacion A: "+poblacionA);
+ console.log("Poblacion B: "+poblacionB);
+ console.log("Año en el que la poblacion B supera a la poblacion A: "+año);
+}
+PoblacionAnual();
