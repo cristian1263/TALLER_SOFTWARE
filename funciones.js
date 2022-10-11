@@ -163,6 +163,7 @@ function HorasTrabajadas(){
 HorasTrabajadas();*/
 
 //punto 4
+/*
 function PromedioEdades(){
   numerohombres=parseInt(prompt("Ingrese el total de Hombres en el salon"));
   numeromujeres=parseInt(prompt("Ingrese el total de Mujeres en el salon"));
@@ -186,4 +187,18 @@ function PromedioEdades(){
   console.log("Total promedio mujeres: "+Totalpromediomujeres);
   console.log("Promedio del Grupo: "+promediogrupo);
 }
-PromedioEdades();
+PromedioEdades();*/
+
+//Punto5
+function NumeroMenor(){
+  cantidadnumeros=parseInt(prompt("Ingrese la cantidad de numeros"));
+  numero=0; numeroanterior=1000;
+  for(i=1;i<=cantidadnumeros;i++){
+    numero=parseInt(prompt("Ingrese el numero"));
+    if(numero < numeroanterior && numero >= 0){
+      numeroanterior=numero;
+    }
+  }
+console.log("El numero menor es:"+numeroanterior);
+}
+NumeroMenor();
