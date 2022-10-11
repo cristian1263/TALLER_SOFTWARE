@@ -287,6 +287,7 @@ function PesoObesidad(){
 PesoObesidad();*/
 
 //Punto 7
+/*
 function Mercado(){
   totaldegasto=0;
 do{
@@ -298,4 +299,25 @@ do{
 }while(i==0);
 console.log("El total gastado en el mercado es de: "+totaldegasto+"$");
 }
-Mercado();
+Mercado();*/
+
+//punto8
+
+function Teatro(){
+  preciopuestos=parseInt(prompt("Ingrese el precio de los asientos"));
+  grupoedad1=0; grupoedad2=0; grupoedad3=0; grupoedad4=0; grupoedad5=0;
+
+  grupoedad1=(preciopuestos*0.35);
+  grupoedad2=(preciopuestos*0.25);
+  grupoedad3=(preciopuestos*0.10);
+  grupoedad4=(preciopuestos*0.25);
+  grupoedad5=(preciopuestos*0.35);
+
+  console.log("El dinero perdido para el teatro en las personas de edades de 5-14 años es de:"+grupoedad1);
+  console.log("El dinero perdido para el teatro en las personas de edades de 15-19 años es de:"+grupoedad2);
+  console.log("El dinero perdido para el teatro en las personas de edades de 20-45 años es de:"+grupoedad3);
+  console.log("El dinero perdido para el teatro en las personas de edades de 46-65 años es de:"+grupoedad4);
+  console.log("El dinero perdido para el teatro en las personas de edades de 66 en Adelante años es de:"+grupoedad5);
+  console.log("Se Recuerda a los clientes que los niños menores de 5 años no son admitidos en el teatro");
+}
+Teatro();
