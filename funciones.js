@@ -209,6 +209,7 @@ console.log("El numero menor es:"+numeroanterior);
 NumeroMenor();*/
 
 //punto6
+/*
 function PesoObesidad(){
   //se declaran las variables acumulativas y se les da un valor inicial de cero para evitar errores
   datospeso=0; acum1=0; acum2=0; acum3=0; acum4=0; acum5=0;
@@ -283,7 +284,18 @@ function PesoObesidad(){
       console.log("El quinto miembro Subio de peso");
     }
 }
-PesoObesidad();
+PesoObesidad();*/
 
-//punto7
-
+//Punto 7
+function Mercado(){
+  totaldegasto=0;
+do{
+  cantidad=parseInt(prompt("Ingrese la cantidad del articulo que tomo"));
+  precio=parseInt(prompt("Ingrese el precio del articulo que tomo"));
+  totalproducto=cantidad*precio;
+  totaldegasto=totaldegasto+totalproducto; // se toma el total del producto y se le agrega a los gastos generales
+ i=parseInt(prompt("indique con un 1 si NO quiere agregar otro producto y con un 0 para agregar otro producto"));
+}while(i==0);
+console.log("El total gastado en el mercado es de: "+totaldegasto+"$");
+}
+Mercado();
