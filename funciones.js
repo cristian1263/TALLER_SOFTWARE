@@ -236,6 +236,7 @@ function PesoObesidad(){
       }
     }
     
+    
   }
   //Se utilizan las variables acumulativas para realizar el calculo del promedio para cada miembro
     promedio1=acum1/10;
@@ -243,11 +244,46 @@ function PesoObesidad(){
     promedio3=acum3/10;
     promedio4=acum4/10;
     promedio5=acum5/10;
+    
+    //la finalidad es de tomar el promedio pasado para cada miembro y despues compararlos con el nuevo resultado
+    promediopasado1=parseInt(prompt("Ingrese el resultado del promedio pasado del primer miembro"));
+    promediopasado2=parseInt(prompt("Ingrese el resultado del promedio pasado del segundo miembro"));
+    promediopasado3=parseInt(prompt("Ingrese el resultado del promedio pasado del tercer miembro"));
+    promediopasado4=parseInt(prompt("Ingrese el resultado del promedio pasado del cuarto miembro"));
+    promediopasado5=parseInt(prompt("Ingrese el resultado del promedio pasado del quinto miembro"));
+    
 
-    console.log("El Promedio total de peso del primer miembro es:"+promedio1);
-    console.log("El Promedio total de peso del segundo miembro es:"+promedio2);
-    console.log("El Promedio total de peso del tercer miembro es:"+promedio3);
-    console.log("El Promedio total de peso del cuarto miembro es:"+promedio4);
-    console.log("El Promedio total de peso del quinto miembro es:"+promedio5);
+    if(promedio1 < promediopasado1){
+      console.log("El primer miembro Bajo de peso");
+    }else{
+      console.log("El primer miembro Subio de peso");
+    }
+
+    if(promedio2 < promediopasado2){
+      console.log("El segundo miembro Bajo de peso");
+    }else{
+      console.log("El segundo miembro Subio de peso");
+    }
+
+    if(promedio3 < promediopasado3){
+      console.log("El tercer miembro Bajo de peso");
+    }else{
+      console.log("El tercer miembro Subio de peso");
+    }
+
+    if(promedio4 < promediopasado4){
+      console.log("El cuarto miembro Bajo de peso");
+    }else{
+      console.log("El cuarto miembro Subio de peso");
+    }
+
+    if(promedio5 < promediopasado5){
+      console.log("El quinto miembro Bajo de peso");
+    }else{
+      console.log("El quinto miembro Subio de peso");
+    }
 }
 PesoObesidad();
+
+//punto7
+
