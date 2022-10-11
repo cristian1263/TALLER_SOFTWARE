@@ -1,5 +1,5 @@
 //Punto 1
-
+/*
 function colorcal()
 {
 var cantidad= parseInt(prompt("Ingrese el numero total de autos"));
@@ -41,7 +41,8 @@ if(Nfinal == "1" || Nfinal == "2")
 
 }
 colorcal();
-
+*/
+/*
 function zoo()
 {
   //pedimos el nombre del animal
@@ -129,5 +130,29 @@ function zoo()
      console.log("Ingrese correctamente el nombre del animal ha realizar la muestra");
     }
 }
-zoo();
+zoo();*/
+
+//Punto 3
+function HorasTrabajadas(){
+  cantidadobreros=parseInt(prompt("Ingrese el total de obreros"));
+  pago=0; pagoextra=0; totalpago=0;  horasextras=0;
+  for( i=1;i<=cantidadobreros;i++ )
+  {
+    cantidadhoras=parseInt(prompt("Ingrese el total de horas trabajas del obrero "+i));
+    if (cantidadhoras > 0  &&   cantidadhoras <= 40 ) {
+       pago=cantidadhoras*20;
+       console.log("El total a pagarle al obrero"+i+" es de: "+pago+"$");
+    }else if (cantidadhoras > 40){
+      horasextras=cantidadhoras-40;
+      pagoextra=horasextras*25;
+      pago=(cantidadhoras-horasextras)*20;
+      totalpago=pago+pagoextra;
+      console.log("El total a pagarle al obrero"+i+" es de: "+totalpago+"$");
+    }else{
+      console.log("Ingrese solo numeros y mayores a cero");
+    }
+   
+  }
+}
+HorasTrabajadas();
 
