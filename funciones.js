@@ -354,15 +354,26 @@ function Kia(){
 Kia();*/
 
 //punto10
-/*
+
 function Encuestas(){
- candidato1=parseInt(prompt("Ingrese el total de votos que obtuvo el candidato numero 1 (solo numeros)"));
- candidato2=parseInt(prompt("Ingrese el total de votos que obtuvo el candidato numero 2 (solo numeros)"));
- candidato3=parseInt(prompt("Ingrese el total de votos que obtuvo el candidato numero 3 (solo numeros)"));
+ candidato1=0;  candidato2=0; candidato3=0; 
  
+ for(i=1; i <= 50000; i++){
+  voto=parseInt(prompt("Ingrese el numero del candidato por el que va a votar, candidato 1, 2 o candidato 3"));
+
+  if(voto == 1){
+    candidato1=candidato1+1;
+  }else if(voto == 2){
+    candidato2=candidato2+1;
+  }else if(voto == 3){
+    candidato3=candidato3+1;
+  }else{
+    console.log("Ingrese solo los numeros registrados para las votaciones");
+  }
+ }
  Totalvotos=candidato1+candidato2+candidato3;
     
- if(Totalvotos <= 50000 ){
+
  if((candidato1 > candidato2) &&  (candidato1 > candidato3))
  {
    console.log("El Ganador en la votaciones fue el candidato numero 1");
@@ -390,13 +401,8 @@ function Encuestas(){
        }
       
        console.log("Total de votos es de: "+Totalvotos);
- 
-}else{
-  console.log("El total de votos registrado supera el maximo");
 }
-
-}
- Encuestas(); */
+ Encuestas();
 
  //punto11
  /*
@@ -538,6 +544,7 @@ function MCD(){
 MCD();*/
 
 //punto15
+/*
 function PoblacionAnual(){
 
 poblacionA=25000000;
@@ -564,4 +571,4 @@ acumulativoB=0;
  console.log("Poblacion B: "+poblacionB);
  console.log("Año en el que la poblacion B supera a la poblacion A: "+año);
 }
-PoblacionAnual();
+PoblacionAnual();*/
